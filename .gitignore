@@ -1,0 +1,4 @@
+# Excludes all bin, objects
+*.out
+*.exe
+*.o
