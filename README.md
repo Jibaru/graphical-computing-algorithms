@@ -20,3 +20,9 @@ sudo apt-get install freeglut3-dev
 ```
 
 To compile include the `-lGL -lGLU -lglut` linkers.
+
+## Screenshots
+
+![Bidimensional_Rotate](/screenshots/animated/bidimensional_rotate.gif)
+![Bidimensional_Scale](/screenshots/animated/bidimensional_scale.gif)
+![Bidimensional_Traslate](/screenshots/animated/bidimensional_traslate.gif)
