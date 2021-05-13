@@ -33,3 +33,14 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 
 - Bidimensional Traslate
 ![Bidimensional_Traslate](/screenshots/animated/bidimensional_traslate.gif)
+
+### Tridimensional Transforms
+
+- Tridimensional Traslate
+![Tridimensional_Traslate](/screenshots/animated/tridimensional_traslate.gif)
+
+- Tridimensional Rotate
+![Tridimensional_Rotate](/screenshots/animated/tridimensional_rotate.gif)
+
+- Tridimensional Scale
+![Tridimensional_Scale](/screenshots/animated/tridimensional_scale.gif)
