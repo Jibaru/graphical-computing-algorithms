@@ -23,6 +23,13 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 
 ## Screenshots
 
+### Bidimensional Transforms
+
+- Bidimensional Rotate
 ![Bidimensional_Rotate](/screenshots/animated/bidimensional_rotate.gif)
+
+- Bidimensional Scale
 ![Bidimensional_Scale](/screenshots/animated/bidimensional_scale.gif)
+
+- Bidimensional Traslate
 ![Bidimensional_Traslate](/screenshots/animated/bidimensional_traslate.gif)
