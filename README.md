@@ -44,3 +44,8 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 
 - Tridimensional Scale
 ![Tridimensional_Scale](/screenshots/animated/tridimensional_scale.gif)
+
+## Curves and Sufaces
+
+- Bezier and Castelljou Surface
+![Tridimensional_Scale](/screenshots/animated/tridimensional_scale.gif)
