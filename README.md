@@ -48,4 +48,4 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 ## Curves and Sufaces
 
 - Bezier and Castelljou Surface
-![Tridimensional_Scale](/screenshots/animated/tridimensional_scale.gif)
+![Bezier_Castelljou_Surface](/screenshots/animated/bezier_castelljau_surface.gif)
