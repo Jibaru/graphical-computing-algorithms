@@ -12,7 +12,6 @@
  * 
  */
 
-#include <iostream>
 #include <vector>
 #include <GL/glut.h>
 
@@ -25,13 +24,18 @@
 
 // R3 Points
 std::vector<Point3d> points = {
-    {0.5, 0.7, 0.0f},
-    {-0.5, 0.3, 0.0f},
-    {0.88, -0.7, 0.0f},
-    {0.2, 0.8, 0.0f},
+    {-0.89, 0.68, 0.0f},
+    {-0.74, -0.57, 0.0f},
+    {-0.22, -0.45, 0.0f},
+    {0.22, -0.59, 0.0f},
+    {0.25, 0.51, 0.1f},
+    {0.83, 0.4, 0.6f},
 };
 
-Point3d applyCastelljau(const std::vector<Point3d> &v_points, const float t)
+int selectedIndex = -1;
+
+Point3d
+applyCastelljau(const std::vector<Point3d> &v_points, const float t)
 {
     std::vector<Point3d> cpy_points = v_points;
 
@@ -44,6 +48,16 @@ Point3d applyCastelljau(const std::vector<Point3d> &v_points, const float t)
     }
 
     return cpy_points[0];
+}
+
+void drawSelectedPoint(const Point3d &point)
+{
+    glColor3f(GLUT_RED_COLOR);
+    glPointSize(10.0f);
+    glBegin(GL_POINTS);
+    glVertex3f(point.x, point.y, point.z);
+    glEnd();
+    glPointSize(2.0f);
 }
 
 void draw()
@@ -63,6 +77,11 @@ void draw()
     }
     glEnd();
 
+    if (selectedIndex != -1)
+    {
+        drawSelectedPoint(points[selectedIndex]);
+    }
+
     // Bezier Curve
     glBegin(GL_POINTS);
     glColor3f(GLUT_YELLOW_COLOR);
@@ -76,6 +95,35 @@ void draw()
 
     glPopMatrix();
     glutSwapBuffers();
+}
+
+void mouse(int button, int state, int x, int y)
+{
+    float transformX = -400.0f + (float)x;
+    float transformY = 300.0f - (float)y;
+
+    float convX = transformX / 400.0f;
+    float convY = transformY / 300.0f;
+
+    if (button == GLUT_RIGHT_BUTTON)
+    {
+        selectedIndex = -1;
+        for (int i = 0; selectedIndex == -1 && i < points.size(); i++)
+        {
+            if (convX >= points[i].x - 0.02 && convX <= points[i].x + 0.02 &&
+                convY >= points[i].y - 0.02 && convY <= points[i].y + 0.02)
+            {
+                selectedIndex = i;
+            }
+        }
+    }
+    else if (button == GLUT_LEFT_BUTTON && selectedIndex != -1)
+    {
+        points[selectedIndex].x = convX;
+        points[selectedIndex].y = convY;
+    }
+
+    glutPostRedisplay();
 }
 
 void init()
@@ -97,6 +145,7 @@ int main(int argc, char *args[])
     glutCreateWindow("Bezier Curve with Castelljau");
 
     glutDisplayFunc(draw);
+    glutMouseFunc(mouse);
 
     init();
 
