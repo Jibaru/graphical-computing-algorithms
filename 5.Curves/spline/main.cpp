@@ -16,7 +16,6 @@
 
 #include <vector>
 #include <GL/glut.h>
-#include "../../lib/spline.h"
 
 #include "../../utils/colors/colors.h"
 #include "../../utils/points/point2d.h"
