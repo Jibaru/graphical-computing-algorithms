@@ -47,5 +47,14 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 
 ## Curves and Sufaces
 
+- Bezier Curve with 3 Control Points
+![Bezier_Curve](/screenshots/animated/bezier_curve.gif)
+
+- Bezier Curve with Castelljau Algorithm
+![Bezier_Castelljau_Curve](/screenshots/animated/bezier_castelljau_curve.gif)
+
+- B-Spline Curve with Boor Algorithm
+![B_Spline_Curve](/screenshots/animated/b_spline_curve.gif)
+
 - Bezier and Castelljou Surface
 ![Bezier_Castelljou_Surface](/screenshots/animated/bezier_castelljau_surface.gif)
