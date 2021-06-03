@@ -56,5 +56,8 @@ To compile include the `-lGL -lGLU -lglut` linkers.
 - B-Spline Curve with Boor Algorithm
 ![B_Spline_Curve](/screenshots/animated/b_spline_curve.gif)
 
+- Hermite Curve
+![Hermite_Curve](/screenshots/animated/hermite_curve.gif)
+
 - Bezier and Castelljou Surface
 ![Bezier_Castelljou_Surface](/screenshots/animated/bezier_castelljau_surface.gif)
